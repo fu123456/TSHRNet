@@ -2,5 +2,6 @@ test_result_*/
 logs_*/
 dataset/*
 !dataset/README.org
+!dataset/data_processing
 checkpoints_*/
 __pycache__/

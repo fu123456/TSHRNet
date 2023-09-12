@@ -21,7 +21,7 @@ Please see "dependencies_install.sh".
 
 ## Datasets
 
-* Our SHHR dataset is available at [OneDrive](https://polyuit-my.sharepoint.com/:u:/g/personal/gangfu_polyu_edu_hk/ERVx4DV78jxGq-1HCPmRsssBOYHPvL_eYmKbGMrELxm8uw?e=tdDAeu) or [Google Drive](https://drive.google.com/file/d/1iBBYIvF5ujLuUe6l22eArFRxFPYAPLVR/view?usp=sharing) (~5G).
+* Our SSHR dataset is available at [Google Drive](https://drive.google.com/file/d/1YitISbuObKi4KFizuBU_V_KSrLE710qK/view?usp=sharing) or [OneDrive](https://polyuit-my.sharepoint.com/:u:/g/personal/gangfu_polyu_edu_hk/EUUzYa-c2ZhDrjeovZWWgSABDY5c2eql0IwS4XTFt7hqrQ?e=C7C2Yf) (~5G).
 * The SHIQ dataset can be found in the project [SHIQ](https://github.com/fu123456/SHIQ).
 * The PSD dataset can be found in the project [SpecularityNet-PSD](https://github.com/jianweiguo/SpecularityNet-PSD).
 
