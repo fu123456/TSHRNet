@@ -3,3 +3,4 @@ logs_*/
 dataset/*
 !dataset/README.org
 checkpoints_*/
+__pycache__/
