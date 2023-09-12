@@ -34,7 +34,7 @@ The bash shell script file of "train.sh" provides the command lines for traning 
 ```
 python train_4_networks.py \
        -trdd dataset \
-       -trdlf dataset/SSHR/train_6_tuples.lst \
+       -trdlf dataset/SSHR/train_7_tuples.lst \
        -dn SSHR
 ```
 
@@ -52,7 +52,7 @@ python train_4_networks_mix.py \
 ```
 python train_4_networks_mix.py \
        -trdd dataset \
-       -trdlf dataset/M-PSD_Dataset/train_validation.lst \
+       -trdlf dataset/M-PSD_Dataset/train.lst \
        -dn PSD_debug_1
 ```
 
@@ -79,10 +79,10 @@ num_checkpoint=60 # the indexes of the used checkpoints
 model_name='SSHR' # find the checkpoints in "checkpoints_${model_name}, like "checkpoints_SSHR"
 testing_data_name='SSHR' # testing dataset name
 # processing testing images
-python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_6_tuples_part1.lst'
-python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_6_tuples_part2.lst'
-python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_6_tuples_part3.lst'
-python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_6_tuples_part4.lst'
+python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_7_tuples_part1.lst'
+python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_7_tuples_part2.lst'
+python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_7_tuples_part3.lst'
+python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/SSHR/test_7_tuples_part4.lst'
 ```
 
 ### Testing on SHIQ
