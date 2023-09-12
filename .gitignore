@@ -1,0 +1,5 @@
+test_result_*/
+logs_*/
+dataset/*
+!dataset/README.org
+checkpoints_*/
