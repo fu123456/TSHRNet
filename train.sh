@@ -24,8 +24,6 @@ python train_4_networks.py \
 # # to train on the mix data of SSHR, SHIQ, and PSD, which could produce better results for real images
 # # generate list file
 # cat dataset/SSHR/train_4_tuples.lst dataset/SHIQ_data_10825/train.lst dataset/PSD/train.lst >> dataset/train_mix.lst
-# shuf train_mix.lst -o train_mix.lst
-# cat dataset/SSHR/test_4_tuples.lst dataset/SHIQ_data_10825/test.lst dataset/PSD/test.lst >> dataset/test_mix.lst
 # python train_4_networks_mix.py \
     #        -trdd dataset \
     #        -trdlf dataset/train_mix.lst \
