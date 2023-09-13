@@ -2,7 +2,7 @@
 
 In this work, we propose a three-stage specular highlight removal network. To support network training and quantitative evaluation, we also present a large-scale synthetic dataset.
 
-### [Paper](https://arxiv.org/abs/2309.06302.pdf)
+### [Paper](https://arxiv.org/pdf/2309.06302.pdf)
 
 **Towards High-Quality Specular Highlight Removal by Leveraging Large-scale Synthetic Data**
 <br>_Gang Fu, Qing Zhang, Lei Zhu, Chunxia Xiao, and Ping Li_<br>
