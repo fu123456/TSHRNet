@@ -1,12 +1,19 @@
 # TSHRNet
 
+In this work, we propose a three-stage specular highlight removal network. To support network training and quantitative evaluation, we also present a large-scale synthetic dataset.
+
+### [Paper](https://arxiv.org/abs/2309.06302.pdf)
+
 **Towards High-Quality Specular Highlight Removal by Leveraging Large-scale Synthetic Data**
+<br>_Gang Fu, Qing Zhang, Lei Zhu, Chunxia Xiao, and Ping Li_<br>
+In ICCV 23
 
-Gang Fu, Qing Zhang, Lei Zhu, Chunxia Xiao, and Ping Li
+## Overview of our methodology
 
-In ICCV's 23
+The following figure presents the pipeline of our three-stage framework. It consists of three stages: (i) physics-based specular highlight removal; (ii) specular-free refinement; and (iii) tone correction. Specifically, in the first stage (see (a)), we decompose an input image into its albedo and shading using two encoder-decoder networks ($E_a$-$D_a$ for albedo, and $E_s$-$D_s$ for shading). Then, the specular-free image can be estimated by multiplying the albedo and shading. In the second stage (see (b)), we feed the coarse result along with the input into an encoder-decoder network ($E_r$-$D_r$) to further refine it to alleviate visual artifacts. In the third stage (see (c)), we feed the refined result along with the input and its specular residue image into an encoder-decoder network ($E_c$-$D_c$) to adjust its tone so that it has the similar tone as the input as much as possible.
 
-In this paper, our goal is to remove specular highlight removal for object-level images. In this paper, we propose a three-stage network for specular highlight removal, consisting of (i) physics-based specular highlight removal, (ii) specular-free refinement, and (iii) tone correction. In addition, we present a large-scale synthetic dataset of object-level images, in which each input image has corresponding albedo, shading, specular residue, diffuse, and tone-corrected diffuse images.
+<p align=center><img width="90%" src="doc/framework.png"/></p>
+
 
 ## Prerequisities of our implementation
 
@@ -149,3 +156,7 @@ For PSD, their images can be constructed as the above form in a list file.
   pages =	 {To appear},
 }
 ```
+
+## Contact
+
+If you have any questions about this project, please contact me by xyzgfu@gmail.com
