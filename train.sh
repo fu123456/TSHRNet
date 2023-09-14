@@ -21,9 +21,15 @@ python train_4_networks.py \
     #        -dn PSD_debug_3_train
 
 
-# # to train on the mix data of SSHR, SHIQ, and PSD, which could produce better results for real images
-# # generate list file
-# cat dataset/SSHR/train_4_tuples.lst dataset/SHIQ_data_10825/train.lst dataset/PSD/train.lst >> dataset/train_mix.lst
+# to train on the mix data of SSHR, SHIQ, and PSD, which could produce better results for real images
+# generate list file
+
+# if [ ! -f "dataset/train_mix.lst" ]; then
+#     cat dataset/SSHR/train_4_tuples.lst dataset/SHIQ_data_10825/train.lst dataset/PSD/train.lst >> dataset/train_mix.lst
+# else
+#     rm -rf dataset/train_mix.lst
+#     cat dataset/SSHR/train_4_tuples.lst dataset/SHIQ_data_10825/train.lst dataset/PSD/train.lst >> dataset/train_mix.lst
+# fi
 # python train_4_networks_mix.py \
     #        -trdd dataset \
     #        -trdlf dataset/train_mix.lst \
