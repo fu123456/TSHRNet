@@ -5,3 +5,4 @@ dataset/*
 !dataset/data_processing
 checkpoints_*/
 __pycache__/
+evaluation
