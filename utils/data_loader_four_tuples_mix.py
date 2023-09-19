@@ -77,14 +77,10 @@ class ImageTransformSingle():
 class ImageTransform():
     def __init__(self, size=256, crop_size=256, mean=(0.5, ), std=(0.5, )):
         self.data_transform = {'train': four_tuple_data_processing.Compose([four_tuple_data_processing.Scale(size=size),
-                                                                            four_tuple_data_processing.RandomCrop(size=crop_size),
-                                                                            four_tuple_data_processing.RandomHorizontalFlip(p=0.5),
                                                                             four_tuple_data_processing.ToTensor(),
                                                                             four_tuple_data_processing.Normalize(mean, std)]),
 
                                 'test': four_tuple_data_processing.Compose([four_tuple_data_processing.Scale(size=size),
-                                                                            four_tuple_data_processing.RandomCrop(size=crop_size),
-                                                                            four_tuple_data_processing.RandomHorizontalFlip(p=0.5),
                                                                             four_tuple_data_processing.ToTensor(),
                                                                             four_tuple_data_processing.Normalize(mean, std)])}
 
