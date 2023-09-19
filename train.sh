@@ -18,7 +18,7 @@ python train_4_networks.py \
 # python train_4_networks_mix.py \
     #        -trdd dataset\
     #        -trdlf dataset/PSD/train.lst \
-    #        -dn PSD_debug_3_train
+    #        -dn PSD
 
 
 # to train on the mix data of SSHR, SHIQ, and PSD, which could produce better results for real images
