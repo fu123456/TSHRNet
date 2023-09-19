@@ -111,7 +111,7 @@ def test(UNet1, UNet2, UNet3, UNet4, model_name, test_dataset):
             img = img.to(torch.device('cpu'))
             object_mask = object_mask.to(torch.device('cpu'))
 
-        grid= make_grid(torch.cat((img,gt_diffuse,gt_diffuse_tc, estimated_diffuse_refined * object_mask, estimated_diffuse_tc * object_mask), dim=0))
+        grid= make_grid(torch.cat((unnormalize(img), unnormalize(gt_diffuse), unnormalize(gt_diffuse_tc), unnormalize(estimated_diffuse_refined) * unnormalize(object_mask), unnormalize(estimated_diffuse_tc) * unnormalize(object_mask)), dim=0))
 
         temp = len(test_dataset.img_list['path_i'][n].split('/'))
         r_subdir = test_dataset.img_list['path_i'][n].split('/')[temp-2]
@@ -125,7 +125,7 @@ def test(UNet1, UNet2, UNet3, UNet4, model_name, test_dataset):
         save_image(grid, grid_name)
 
         # # save albedo image
-        # estimated_albedo = transforms.ToPILImage(mode='RGB')((estimated_albedo)[0, :, :, :] *(object_mask)[0, :, :, :])
+        # estimated_albedo = transforms.ToPILImage(mode='RGB')(unnormalize(estimated_albedo)[0, :, :, :] *unnormalize(object_mask)[0, :, :, :])
         # subdir = os.path.join(dir_t1, r_subdir)
         # if not os.path.exists(subdir):
         #     os.makedirs(subdir)
@@ -133,7 +133,7 @@ def test(UNet1, UNet2, UNet3, UNet4, model_name, test_dataset):
         # estimated_albedo.save(detected_shadow_name)
 
         # # save shading image
-        # estimated_shading = transforms.ToPILImage(mode='RGB')((estimated_shading)[0, :, :, :] * (object_mask)[0, :, :, :])
+        # estimated_shading = transforms.ToPILImage(mode='RGB')(unnormalize(estimated_shading)[0, :, :, :] * unnormalize(object_mask)[0, :, :, :])
         # subdir = os.path.join(dir_t2, r_subdir)
         # if not os.path.exists(subdir):
         #     os.makedirs(subdir)
@@ -141,7 +141,7 @@ def test(UNet1, UNet2, UNet3, UNet4, model_name, test_dataset):
         # estimated_shading.save(shadow_removal_name)
 
         # save specular-refined image
-        estimated_diffuse_refined = transforms.ToPILImage(mode='RGB')((estimated_diffuse_refined)[0, :, :, :] * (object_mask)[0, :, :, :])
+        estimated_diffuse_refined = transforms.ToPILImage(mode='RGB')(unnormalize(estimated_diffuse_refined)[0, :, :, :] * unnormalize(object_mask)[0, :, :, :])
         subdir = os.path.join(dir_t4, r_subdir)
         if not os.path.exists(subdir):
             os.makedirs(subdir)
@@ -149,7 +149,7 @@ def test(UNet1, UNet2, UNet3, UNet4, model_name, test_dataset):
         estimated_diffuse_refined.save(estimated_diffuse_name)
 
         # save tone-corrected diffuse image
-        estimated_diffuse_tc = transforms.ToPILImage(mode='RGB')((estimated_diffuse_tc)[0, :, :, :] * (object_mask)[0, :, :, :])
+        estimated_diffuse_tc = transforms.ToPILImage(mode='RGB')(unnormalize(estimated_diffuse_tc)[0, :, :, :] * unnormalize(object_mask)[0, :, :, :])
         subdir = os.path.join(dir_t5, r_subdir)
         if not os.path.exists(subdir):
             os.makedirs(subdir)
