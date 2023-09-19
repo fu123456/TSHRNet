@@ -31,5 +31,4 @@ python test_4_networks.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_
 # model_name='PSD'
 # testing_data_name='PSD'
 # python test_4_networks_mix.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/PSD/test.lst'
-# # python test_4_networks_mix.py -mn ${model_name} -l ${num_checkpoint} -tdn ${testing_data_name} -tedd 'dataset' -tedlf 'dataset/PSD/train.lst'
 # ## <<< testing PSD <<<
