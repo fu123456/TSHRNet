@@ -145,6 +145,12 @@ SHIQ_data_10825/train/08766_A.png SHIQ_data_10825/train/08766_S.png SHIQ_data_10
 
 For PSD, their images can be constructed as the above form in a list file.
 
+## Pretrained models
+
+Pretrained models on SSHR are available at [checkpoints_SSHR](https://drive.google.com/file/d/1Nl4y--ZP6iqyIAbd7erQpR76lAfa8OG_/view?usp=sharing).
+Pretrained models on the mix data are available at [checkpoints_mix_SSHR_SHIQ_PSD](https://drive.google.com/file/d/1B_0z6Mh4q43hRFaw24_MbkIN8HACKA4_/view?usp=sharing).
+
+
 ## Citation
 
 ```
