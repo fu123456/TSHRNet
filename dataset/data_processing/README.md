@@ -4,7 +4,7 @@ TC is to correct the tone of the ground truth specular-free images in our datase
 
 <p align=center><img width="50%" src="../../doc/tone_correction.jpg"/></p>
 
-Figure Tone correction for ground truth specular-free images in our dataset. (a) Input. (b) Ground truth specular-free image. (c) Tone correction version of (b). (d) Specular highlight mask of (a). (e) Histogram comparison between (a) and (c). Note that the specular highlight pixels are excluded using (d) for plotting histograms of (a)-(c).
+**Figure** Tone correction for ground truth specular-free images in our dataset. (a) Input. (b) Ground truth specular-free image. (c) Tone correction version of (b). (d) Specular highlight mask of (a). (e) Histogram comparison between (a) and (c). Note that the specular highlight pixels are excluded using (d) for plotting histograms of (a)-(c).
 
 ## How to use
 
