@@ -154,7 +154,7 @@ For PSD, their images can be constructed as the above form in a list file.
 ## Citation
 
 ```
-@inproceedings{zhang-2017-stack,
+@inproceedings{fu-2023-towar-a,
   author =	 {Fu, Gang and Zhang, Qing and Zhu, Lei and Xiao, Chunxia and Li, Ping},
   title =	 {Towards high-quality specular highlight removal by leveraging large-scale synthetic data},
   booktitle =	 {Proceedings of the IEEE International Conference on Computer Vision},
